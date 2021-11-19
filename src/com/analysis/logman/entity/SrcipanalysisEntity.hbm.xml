@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.analysis.logman.entity.SrcipanalysisEntity" table="srcipanalysis" schema="logman">
+        <id name="id">
+            <column name="id" sql-type="bigint(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="starttime">
+            <column name="starttime" sql-type="datetime" not-null="false"/>
+        </property>
+        <property name="endtime">
+            <column name="endtime" sql-type="datetime" not-null="false"/>
+        </property>
+        <property name="srcip">
+            <column name="srcip" sql-type="bigint(20)" not-null="false"/>
+        </property>
+        <property name="totalnum">
+            <column name="totalnum" sql-type="bigint(20)" not-null="false"/>
+        </property>
+        <property name="totaldestipnum">
+            <column name="totaldestipnum" sql-type="int(11)" not-null="false"/>
+        </property>
+        <property name="destips">
+            <column name="destips" sql-type="text" not-null="false"/>
+        </property>
+        <property name="counts">
+            <column name="counts" sql-type="text" not-null="false"/>
+        </property>
+        <property name="srcipaddress">
+            <column name="srcipaddress" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="isattack">
+            <column name="isattack" sql-type="int(11)" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

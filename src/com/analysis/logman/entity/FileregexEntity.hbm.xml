@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.analysis.logman.entity.FileregexEntity" table="fileregex" schema="logman">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="type">
+            <column name="type" sql-type="varchar(255)"/>
+        </property>
+        <property name="regex">
+            <column name="regex" sql-type="varchar(255)"/>
+        </property>
+    </class>
+</hibernate-mapping>

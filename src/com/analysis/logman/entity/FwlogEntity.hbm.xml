@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.analysis.logman.entity.FwlogEntity" table="fwlog" schema="logman">
+        <id name="id">
+            <column name="id" sql-type="bigint(20)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="internalip">
+            <column name="internalip" sql-type="bigint(15)"/>
+        </property>
+        <property name="producetime">
+            <column name="producetime" sql-type="datetime"/>
+        </property>
+        <property name="mathedstrategy">
+            <column name="mathedstrategy" sql-type="varchar(150)" length="150"/>
+        </property>
+        <property name="accessstrategy">
+            <column name="accessstrategy" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="srcip">
+            <column name="srcip" sql-type="bigint(15)"/>
+        </property>
+        <property name="srcport">
+            <column name="srcport" sql-type="int(6)"/>
+        </property>
+        <property name="destip">
+            <column name="destip" sql-type="bigint(15)"/>
+        </property>
+        <property name="destport">
+            <column name="destport" sql-type="int(6)"/>
+        </property>
+        <property name="protocol">
+            <column name="protocol" sql-type="int(6)"/>
+        </property>
+        <property name="address">
+            <column name="address" sql-type="varchar(255)" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

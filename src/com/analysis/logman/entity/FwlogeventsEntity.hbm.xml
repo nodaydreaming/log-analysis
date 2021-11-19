@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.analysis.logman.entity.FwlogeventsEntity" table="fwlogevents" schema="logman">
+        <id name="id">
+            <column name="id" sql-type="bigint(10)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="starttime">
+            <column name="starttime" sql-type="datetime"/>
+        </property>
+        <property name="endtime">
+            <column name="endtime" sql-type="datetime"/>
+        </property>
+        <property name="srcip">
+            <column name="srcip" sql-type="bigint(20)" not-null="false"/>
+        </property>
+        <property name="destip">
+            <column name="destip" sql-type="bigint(20)" not-null="false"/>
+        </property>
+        <property name="destport">
+            <column name="destport" sql-type="int(255)" not-null="false"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="int(11)"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

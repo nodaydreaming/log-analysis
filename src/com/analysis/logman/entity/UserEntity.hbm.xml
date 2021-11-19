@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.analysis.logman.entity.UserEntity" table="user" schema="logman">
+        <id name="id">
+            <column name="id" sql-type="int(3)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="telephone">
+            <column name="telephone" sql-type="varchar(15)" length="15"/>
+        </property>
+    </class>
+</hibernate-mapping>
